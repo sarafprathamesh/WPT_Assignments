@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function input(){
+                num=parseInt(prompt("Enter Number"));
+                power=parseInt(prompt("Enter Power"));
+                pow(num,power);
+            }
+            function pow(x,y){
+                sol=1
+                for(i=0;i<y;i++){
+                    sol*=x;
+                }
+                document.write(sol)
+            }
+        </script>
+
+    </head>
+    <body>
+        <button id="btn" onclick="input()">Click me</button>
+    </body>
+</html>

@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <style>
+        body {
+            display:flex;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+        }
+
+        fieldset {
+            display: flex;
+            border-color: blue;
+            border-width: 3px;
+            border-radius: 25px;
+            width:500px;
+        }
+
+        legend {
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            width: 200px;
+            font-weight: bold;
+        }
+
+        table {
+            color: white;
+        }
+
+        td {
+            align-self: center;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var show1 = document.getElementById('show');
+            if (show1.type == 'password') {
+                show1.type = 'text';
+            }
+            else {
+                show1.type = 'password';
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+    <form action="">
+        <fieldset>
+            <legend>
+                <span style="margin-left:35px;">Name and address</span>
+            </legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="ssn">SSN:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="ssn" id="ssn">
+                    </td>
+                    <td style="background-color:blue; border-radius:5px">
+                        Fill in name and address
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fn">Full name:</label>
+                    </td>
+                    <td>
+                        <input type="fn" name="fn" id="fn">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="street">Street and number:</label>
+                    </td>
+                    <td>
+                        <input for="street" name="street" id="street">
+                    </td>
+                <tr>
+                    <td>
+                        <label for="pc">Postal code:</label>
+                    </td>
+                    <td>
+                        <input for="pc" name="pc" id="pc">
+                    </td>
+                <tr>
+                    <td>
+                        <label for="ct">City:</label>
+                    </td>
+                    <td>
+                        <input for="ct" name="ct" id="ct">
+                    </td>
+                </tr>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <span style="margin-left:15px;">Username and password</span>
+            </legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="un">Username:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="un" id="un">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="show">Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" name="ps" id="show">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+                        <input type="checkbox" id="spswd" onclick="myFunction();">
+                        <label for="spswd">show password</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>

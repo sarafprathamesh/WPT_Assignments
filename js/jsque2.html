@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script>
+        function maxnum() {
+            num1 = prompt("Enter number:");
+            mesg=prompt("Enter message:")
+            for(i=0;i<parseInt(num1); i++){
+                console.log(i);
+                console.log(document.getElementById("h").innerHTML +=mesg +" ");
+                // i=i+parseInt(1);
+            }
+            
+
+        }
+    </script>
+   <style>
+    button{
+        height: 40px;
+        width:50px;
+        
+    }
+    body{
+
+        text-align: center;
+    }
+   </style>
+</head>
+
+<body id="h">
+<button type="button" onclick="maxnum()">Click Here</button>
+<p id="para"></p>
+</body>
+
+</html>

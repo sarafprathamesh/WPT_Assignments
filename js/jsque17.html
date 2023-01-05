@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script>
+            function calculate(){
+                radius=parseInt(document.getElementById("rad").value)
+                area=Math.PI*Math.pow(radius,2);
+                circumference=2*Math.PI*radius
+                document.getElementById("Sol1").innerHTML="Area &nbsp;&nbsp; : &nbsp;&nbsp;"+Math.round(area)
+                document.getElementById("Sol2").innerHTML="Circumference &nbsp;&nbsp;:&nbsp;&nbsp; "+Math.round(circumference)
+            }
+        </script>
+
+    </head>
+    <body> 
+        <table>
+            <tr>
+                <td>
+                    Enter Radius :
+                </td>
+                <td>
+                    <input type="number" name="rad" id="rad" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="calculate()">Display</button>
+                </td>
+            </tr>
+            <tr>
+                <td id="Sol1">
+
+                </td>
+            </tr>
+            <tr>
+                <td id="Sol2">
+
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

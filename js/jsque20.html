@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [];
+        function namearr(ev) {
+           
+            if (ev.which == 13||ev==13) {
+         name = document.getElementById("nm").value;
+            arr.push(name);
+            str = arr.join(",");
+            console.log(str);
+            console.log(arr);
+            document.getElementById("mydiv").innerHTML = str.toUpperCase();
+            document.getElementById("nm").value="";
+            }
+           
+            
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Enter the name: <input type="text" name="nm" id="nm" onkeypress="namearr(event)">
+        <button type="button" name="btm" id="btn" onclick="namearr(13)">Submit</button>
+    </div>
+    <div id="mydiv">
+
+    </div>
+</body>
+
+</html>

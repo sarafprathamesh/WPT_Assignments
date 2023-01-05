@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script>
+        function showmsg() {
+            const monthnm = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const weekdayname = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+            today = new Date();
+            nextyear = new Date("2023-01-01");
+            weekday = weekdayname[today.getDay()];
+            day = today.getDate();
+            month = monthnm[today.getMonth()];
+            year = today.getFullYear();
+            daysleft =Math.floor((nextyear.getTime() - today.getTime()) / (1000 * 24 * 3600));
+            str = `Today is ${weekday}, ${day} ${month} ${year}, Welcome, and Good Afternoon to You.<br>
+            Number of days left till end of year : ${daysleft}`
+            document.getElementById("ShettyAnna").innerHTML=str;
+        }
+    </script>
+</head>
+
+<body>
+
+    
+    <button type="button" onclick="showmsg()">Get Date</button>
+    <div id="ShettyAnna">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script>
+        let name = [];
+
+        let count = 0;
+        function acceptName(event) {
+            // alert("hi");
+
+            if (event.which == 13) {
+                count++;
+                //console.log("hello")
+                // alert("hello");
+                val = document.getElementById("nm").value;
+                console.log("val : " + val);
+                name.push(val);
+                document.getElementById("nm").value = "";
+            }
+            if (count == 6)
+                document.getElementById("nm").type = "hidden";
+            if (event.target.id == "display") {
+                displayName()
+            }
+        }
+        function displayName() {
+            console.log("name type:" + typeof (name));
+            console.log(name);
+            name.sort();
+            for (var i = 0; i < 6; i++) {
+                document.getElementById("para").innerHTML += name[i] + "<br>";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="text" name="nm" id="nm" onkeypress="acceptName(event)" placeholder="Enter Name">
+    <button type="button" name="display" id="display" onclick="acceptName(event)">Display Name</button>
+    <div id="para"></div>
+</body>
+
+</html>

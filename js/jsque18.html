@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script>
+            function query(){
+                // console.log("Hello")
+                var str=document.getElementById("str").value;
+                var subStr=document.getElementById("subStr").value;
+                var repStr=document.getElementById("repStr").value;
+                var opr=document.getElementsByName("operation")
+                for(i=0;i<opr.length;i++){
+                    // console.log(opr[i]+"Hi"+opr.length)
+                    if(opr[i].checked){
+                        // console.log(opr[i].id+"Hi")
+                        switch(opr[i].id){
+                            case "search":
+                            document.getElementById("para").innerHTML=str.includes(subStr);
+                                break;
+                            case "upper":
+                                document.getElementById("para").innerHTML=str.toUpperCase();
+                                break;
+                            case "lower":
+                                document.getElementById("para").innerHTML=str.toLowerCase();
+                                break;
+                            case "trim":
+                                document.getElementById("para").innerHTML=str.replace(/ /g,"");
+                                break;
+                            case "concat":
+                                document.getElementById("para").innerHTML=str.concat(subStr);
+                                break;
+                            case "replace":
+                                check=new RegExp(subStr,'g');
+                                document.getElementById("para").innerHTML=str.replace(check,repStr);
+                                break;
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            Enter String : <input type="text" name="str" id="str">
+            <br><br>
+            Enter Sub String : <input type="text" name="subStr" id="subStr">
+            <br><br>
+            Replace String With : <input type="text" name="repStr" id="repStr">
+            <br><br>
+            <input type="radio" name="operation" id="search">Search SubString in Main String
+            <input type="radio" name="operation" id="upper">To UpperCase
+            <input type="radio" name="operation" id="lower">To LowerCase
+            <input type="radio" name="operation" id="trim">Trim Spaces
+            <input type="radio" name="operation" id="concat">Concatenate
+            <input type="radio" name="operation" id="replace">Replace
+            <br><br>
+            <button type="button" onclick="query()">Submit Query</button>
+        </div>
+        <div id="para">
+
+        </div>
+    </body>
+</html>

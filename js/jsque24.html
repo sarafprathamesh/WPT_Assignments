@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showpass() {
+            var y = document.getElementById("password1");
+
+            if (y.type == "password") {
+                y.type = "text";
+            }
+            else {
+                y.type = "password";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <form style="border:2px solid blue; width:400px; padding-left:20px ;">
+            <table>
+                <tr>
+                    <td>
+                        <br><br>
+                        Enter UserName : <input type="text" name="uname" id="uname" required pattern="[a-zA-Z]{6,10}"
+                             autofocus> <br> <br>
+                    </td>
+                    <td id="uname1">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password : <input type="password" name="password1" id="password1" required pattern=".*[1-9,#].*"
+                            minlength="8"> <br> <br>
+                    </td>
+                    <td id="pass">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Show Password : <input type="checkbox" name="spass" id="spass" onclick="showpass()"> <br> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button type="submit" name="btn" id="btn">Login</button> <br><br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+.myheaderdiv{
+    border:2px solid red;
+    border-radius: 6px;
+    background-color: black;
+    color:white;
+    padding-left: 400px;
+}

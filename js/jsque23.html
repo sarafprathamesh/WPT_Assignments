@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function compute() {
+            var num1 = parseFloat(document.getElementById("txt1").value);
+            var num2 = parseFloat(document.getElementById("txt2").value);
+            var num3 = parseFloat(document.getElementById("txt3").value);
+            if (num1 <= 1500000 && num1 > 0 && num3 >= 7 && num3 <= 15) {
+                var monthlypayment = (((num1 * num2 * num3) / 100) + num1) / (12 * num3);
+                document.getElementById("txt4").value = monthlypayment;
+
+                var totalpayment = ((num1 * num2 * num3) / 100) + num1;
+                document.getElementById("txt5").value = totalpayment;
+
+
+                var simpleinterest = (num1 * num2 * num3) / 100;
+                document.getElementById("txt6").value = simpleinterest;
+            }
+            else {
+                document.getElementById("mydiv").innerHTML = "Enter loan amount less than 1500000 and Repayment period should be between 7 and 15 Years";
+            }
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <form style="border:2px solid blue; width:600px; padding-left:20px;">
+        <div>
+            <h3>Enter Loan Information :</h3><br>
+            <table>
+                <tr>
+                    <td>
+                        1) Amount of the loan (any currency)
+                    </td>
+                    <td>
+                        <input type="text" name="txt" id="txt1" autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2) Annual percentage rate of interest
+                    </td>
+                    <td>
+                        <input type="text" name="txt" id="txt2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3) Repayment Period in years
+                    </td>
+                    <td>
+                        <input type="text" name="txt" id="txt3">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div>
+            <button type="button" name="btn" id="btn1" onclick="compute()">Compute</button>
+        </div>
+        <div>
+            <h3>Payment Information : </h3>
+            <table>
+                <tr>
+                    <td>
+                        4) Your Monthly Payment will be
+                    </td>
+                    <td>
+                        <input type="text" name="txt" id="txt4" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        5) Your total payment will be
+                    </td>
+                    <td>
+                        <input type="text" name="txt" id="txt5" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        6) Your total interest payments will be
+                    </td>
+                    <td>
+                        <input type="text" name="txt" id="txt6" readonly>
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+
+        </div>
+        <div id="mydiv" style="color:red">
+
+        </div>
+    </form>
+</body>
+
+</html>

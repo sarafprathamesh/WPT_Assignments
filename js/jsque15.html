@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name1=[];
+        var arr=[];
+        var str=0;
+        function revArr(ev){
+            if(ev.which==8){
+                name1.pop();
+            }
+            if((ev.which>=65 && ev.which<=90) || (ev.which>=97 && ev.which<=122)){
+                name1.push(ev.key);
+            }
+            if(ev.which==13){
+                name1.reverse();
+                console.log(name1);
+                str=name1.reduce((acc,val)=>acc+val);
+                console.log(str);
+                name1=[];
+                document.getElementById("nm").value="";
+                arr.push(str);
+                arr.sort();
+                document.getElementById("mydiv").innerHTML=arr;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        Enter the name: <input type="text" name="nm" id="nm" onkeypress="revArr(event)">
+        <button type="button" name="btn" id="btn" onclick="revArr(13)">Submit</button>
+    </div>
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

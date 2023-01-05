@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findstr() {
+            var arr = ["www.google.com", "www.msn.com", "www.amazon.co.in", "in.answers.yahoo.com", "en.m.wikipedia.com", "codehs.gitbooks.io", "www.coderanch.com"];
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].startsWith("www")) {
+                    document.getElementById("mydiv").innerHTML += arr[i] + "<br>";
+                }
+            }
+        }
+
+        // var arr1=arr.filter(x=>x.startsWith("www"));
+        // document.getElementById("mydiv").innerHTML=arr1;
+
+        // }
+    </script>
+</head>
+
+<body>
+    <div>
+        <button type="button" name="btn" id="findstr" onclick="findstr()">Click Here To Check the array</button>
+    </div>
+    <div id="mydiv">
+
+    </div>
+</body>
+
+</html>

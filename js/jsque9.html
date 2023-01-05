@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script>
+        function calculateCInterest(){
+                p=parseInt(document.getElementById("principal").value);
+                r=parseFloat(document.getElementById("interest").value);
+                n=parseFloat(document.getElementById("duration").value);
+                ci=[p* Math.pow((1+(r/100)),n)]-p
+                document.getElementById("cmpintrst").value=ci
+            }
+        </script>
+
+
+        <style>
+            header{
+                text-align: center;
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <header>--------------------------------------------------------------------------------------------------------------------------------------------------
+            <h1 id="cmpd">**********Calculate Compund Interest**********</h1>
+                --------------------------------------------------------------------------------------------------------------------------------------------------</header>
+        <table>
+            <tr>
+                <td><label for="principal">Principal</label></td>
+                <td>-</td>
+                <td><input type="number" name="principal" id="principal"></td>
+            </tr>
+            <tr>
+                <td><label for="interest">Rate of Interest</label></td>
+                <td>-</td>
+                <td><input type="number" name="interest" id="interest">%</td>
+            </tr>
+            <tr>
+                <td><label for="duration">Period</label></td>
+                <td>-</td>
+                <td><input type="number" name="duration" id="duration" onkeyup="calculateCInterest()">yr</td>
+            </tr>
+            <tr>
+                <td><label for="cmpintrst">Compound Interest</label></td>
+                <td>-</td>
+                <td><input type="text" name="cmpintrst" id="cmpintrst" readonly ></td>
+            </tr>
+        </table>
+    </body>
+</html>

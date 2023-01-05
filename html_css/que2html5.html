@@ -1,0 +1,148 @@
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.6.1.js"
+		integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<script src="../bootstrap-4.6.2-dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.css">
+	</link>
+	<style>
+		body {
+			background-color: rgb(11, 95, 163);
+		}
+		fieldset{
+			width:500px;
+			margin-left: 375px;
+		}
+
+		legend {
+			color: white
+		}
+
+		table {
+
+			color: white;
+
+		}
+		.bi{
+			color: white;
+		}
+
+		th {
+			text-align: right;
+		}
+		.btn{
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			background-color: rgb(106, 173, 18);
+			border-width:0px;
+			box-shadow:3px 3px 5px rgb(66, 64, 64);
+		}
+	</style>
+</head>
+
+<body>
+	<form action="">
+		<fieldset>
+			<legend>
+				Registration Details
+			</legend>
+			<table align="center">
+				<tr>
+					<th>
+						<label for="uninm"> University: </label>
+					</th>
+					<td>
+						<input type="text" name="uni" id="uninm" autofocus>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="intnm">Institute:<label>
+					</th>
+					<td>
+						<input type="text" name="inst" id="instnm">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="brnch">Branch:<label>
+					</th>
+					<td>
+						<select>
+							<option>-----Select-----</option>
+							<option>Akurdi</option>
+							<option>Ravet</option>
+							<option>Chinchwad</option>
+							<option>Talegaon</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label> Degree</label>
+					</th>
+					<td>
+						<select>
+							<option>-----Select-----</option>
+							<option>BE</option>
+							<option>ME</option>
+							<option>M.Com</option>
+							<option>B.Com</option>
+						</select>
+					</td>
+					<td> </td>
+					<td> <input type="radio" name="hi" id="h1">Pursuing <input type="radio" name="hi" id="h2">Completed
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label> Average CPI:</label>
+					</th>
+					<td>
+						<input type="number" name="avg" id="avg">
+					</td>
+					<td>
+						Upto
+					</td>
+					<td>
+						<input type="number" name="sem" id="sem">
+					</td>
+					<td>
+						Th Semester
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="web"> Your Website or Blog</label>
+					</th>
+					<td>
+						<input type="text" name="web" id="web" value="http://">
+					</td>
+				</tr>
+
+
+			</table>
+		</fieldset>
+		<table align="center">
+			<tr>
+				<td style="align-self: right;">
+					<a href="que5.html"><button type="button" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+						<path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+					  </svg></button></a>
+				</td>
+				<td>
+					&nbsp;&nbsp; Step 2 &nbsp;&nbsp;
+				</td>
+				<td style="align-self:left;">
+				<a href="./que6.html">	<button type="button" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+					<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+				  </svg></button></a>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkdate() {
+            var billDate=document.getElementById("bdt").value
+            if(billDate!=""){
+                billDate = new Date(billDate);
+            }
+            var shipDate = document.getElementById("sdt").value;
+            if(shipDate!=""){
+                shipDate=new Date(shipDate);
+            }
+
+
+            var orderId=document.getElementById("oid").value;
+            var custId=document.getElementById("cid").value;
+            var sumAmt=document.getElementById("oid1").value;
+            alert("Hi")
+            if (billDate > shipDate) {
+                
+                document.getElementById("td3").innerHTML = "Billing Date Cannot be greater than Shipping Date";
+                return false;
+
+            }
+            else {
+                
+                
+                if(billDate!=""&&shipDate!=""&&orderId!="" &&custId.trim()!=""&&sumAmt!=""){
+                document.getElementById("mydiv").innerHTML += "<br>" + " Order ID :" + orderId;
+                document.getElementById("mydiv").innerHTML += "<br>" + " Customer Name :" + custId;
+                document.getElementById("mydiv").innerHTML += "<br>" + " Billing Date :" + document.getElementById("bdt").value;
+                document.getElementById("mydiv").innerHTML += "<br>" + " Shipping Date :" + document.getElementById("sdt").value;
+                document.getElementById("mydiv").innerHTML += "<br>" + " Order Total :" + sumAmt;
+
+                document.getElementById("oid").value = "";
+                document.getElementById("cid").value = "";
+                document.getElementById("bdt").value = "";
+                document.getElementById("sdt").value = "";
+                document.getElementById("oid1").value = "";
+
+
+                document.getElementById("td3").innerHTML = "";
+                }
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form  style="width:600px; border:2px solid blue; padding-left: 20px;" >
+            <table>
+                <tr>
+                    <br><br>
+                    <td>
+                        <br>
+                        Order Id :
+                    </td>
+                    <td>
+                        <input type="text" name="oid" id="oid" autofocus required>
+                    </td>
+                    <td name="td" id="td1">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        Cust Name :
+                    </td>
+                    <td>
+                        <input type="text" name="cid" id="cid" required minlength="6">
+                    </td>
+                    <td name="td" id="td2">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        Enter Billing Date :
+                    </td>
+                    <td>
+                        <input type="date" name="bdt" id="bdt" required>
+                    </td>
+                    <td name="td" id="td3" style="color: red;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        Enter Shipping Date :
+                    </td>
+                    <td>
+                        <input type="date" name="sdt" id="sdt" required>
+                    </td>
+                    <td name="td" id="td4">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        Order Total :
+                    </td>
+                    <td>
+                        <input type="text" name="oid1" id="oid1" required>
+                    </td>
+                    <td name="td" id="td5">
+
+                    </td>
+                </tr>
+            </table>
+            <div align="center">
+                <br><br>
+                <button type="button" onclick="checkdate()" name="btn" id="btn"> Display </button>
+                
+            </div>
+            
+            
+        </form>
+        <div id="mydiv">
+
+        </div>
+        <br><br>
+    </div>
+</body>
+
+</html>

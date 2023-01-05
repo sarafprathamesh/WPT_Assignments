@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function grparr(ev) {
+            var arr=[];
+            if (ev.which == 13 || ev == 13) {
+                var name = document.getElementById("nm").value;
+                arr.push(name);
+                for(var ob of arr){
+                    document.getElementById("list").innerHTML+="<li>"+ob+"</li>";
+                }
+                document.getElementById("nm").value="";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <h3>Members of my group are</h3>
+    <ol id="list">
+    </ol>
+    <div>
+        Enter name of Group Members: <input type="text" name="nm" id="nm" onkeypress="grparr(event)">
+        <button type="button" name="btn" id="btn" onclick="grparr(13)">Submit</button>
+    </div>
+    <div id="mydiv">
+
+    </div>
+</body>
+
+</html>

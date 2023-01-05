@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#find").click(function () {
+                $('div:contains("training")').css("color", "red");
+                $('div:contains("Training")').css("color", "red");
+            })
+        })
+        // function find1() {
+        //     alert("HI")
+        //     var arr=document.getElementsByTagName("div");
+        //     console.log(arr)
+        //     for(var ob of arr){
+        //     if(ob.contains("div")){
+        //         ob.style = "color:red";
+        //     }
+        // }
+        // }
+    </script>
+</head>
+
+<body>
+    <div><span></span>
+        Training starts tomorrow morning at ground.
+    </div>
+    <div>
+        <br>How are you.
+    </div>
+    <div>
+        <br>Man, what a hectic day it was?
+    </div>
+    <div>
+        <br>He would need all the training he could get in between now and mid summer.
+    </div>
+    <div>
+        <button type="button" name="btn" id="find">Click</button>
+    </div>
+</body>
+
+</html>

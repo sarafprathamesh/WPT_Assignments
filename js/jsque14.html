@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="shapes.js"></script>
+    <script> 
+        function rect()
+        {
+            var l=prompt("Enter length: ");
+            var b=prompt("Enter breadth: ");
+            var pc=new Rectangle(l,b);
+            str=`length=${l} breadth=${b} area=${pc.printArea()} perimeter=${pc.printPerimeter()}`;
+            document.getElementById("disp").innerHTML=str;
+        }
+        function circle()
+        {
+            var rad=prompt("Enter radius: ");
+            var pc=new Circle(rad);
+            str=`radius=${rad} area=${pc.printArea()} Circumference=${pc.printCircum()}`;
+            document.getElementById("disp").innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    <button type="text" id="rect" onclick="rect()">rectangle</button>
+    <button type="text" id="circle" onclick="circle()">circle</button>
+    <div id="disp">
+
+    </div>
+</body>
+</html>

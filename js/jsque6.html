@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function calculate(){
+                num=parseInt(prompt("Enter Number"));
+                sum=0;
+                while(num!=0){
+                    rem=parseInt(num%10);
+                    num=parseInt(num/10);
+                    sum+=rem;
+                    console.log(rem)
+                }
+                document.getElementById("para").innerHTML=sum;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="calculate()">Click Me</button>
+        <p id="para"></p>
+    </body>
+</html>

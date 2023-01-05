@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script>
+        let emparr = [{ empno: 10, empname: "Prathamesh", salary: "20000" }, { empno: 11, empname: "Swapnil", salary: "40000" }];
+
+        function showtable() {
+            str = `<table>
+            <tr>
+                <th>EmpNo</th>
+                <th>EmpName</th>
+                <th>Salary</th>
+            </tr>`
+            for (var ob of emparr) {
+                str += `<tr>
+                <td>${ob.empno}</td>
+                <td>${ob.empname}</td>
+                <td>${ob.salary}</td>
+            </tr>`
+            }
+            str += "</table>";
+
+            document.getElementById('mydiv').innerHTML = str;
+        }
+
+        function adddata() {
+            empno = document.getElementById("empno").value;
+            empname = document.getElementById("empname").value;
+            salary = document.getElementById("salary").value;
+            obj = { empno, empname, salary };
+            emparr.push(obj);
+            console.log(empno);
+            if(empno!=""&&empname!=""&&salary!="")
+            
+            showtable();
+            document.getElementById("form1").reset();
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form1">
+        <div>
+            EmpID : <input type="text" name="empno" id="empno" required autofocus > <br><br>
+            EmpName : <input type="text" name="empname" id="empname" required> <br><br>
+            Salary : <input type="text" name="salary" id="salary" required> <br><br>
+        </div>
+        <br>
+        <button type="button" id="btn" onclick="adddata()">Add Employee Data</button>
+        <button type="button" id="btn1" onclick="showtable()">Show Employee Data</button>
+        <div id="mydiv">
+
+        </div>
+    </form>
+</body>
+
+</html>

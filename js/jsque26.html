@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function senddata() {
+            var x = parseInt(document.getElementById("lnum").value);
+
+            if(x>0){
+                document.getElementById("mydiv").innerHTML += "<br>" + " Name :" + document.getElementById("nm").value;
+                document.getElementById("mydiv").innerHTML += "<br>" + " Birth Date :" + document.getElementById("bdate").value;
+                document.getElementById("mydiv").innerHTML += "<br>" + " Email Address :" + document.getElementById("email").value;
+
+                var arr=document.getElementsByName("gender");
+                for(var ob of arr){
+                    console.log(ob.checked)
+                    if(ob.checked){
+                        alert("hi");
+                        document.getElementById("mydiv").innerHTML += "<br>" + " Gender :" + ob.value;
+                    }
+                }
+
+
+                
+                document.getElementById("mydiv").innerHTML += "<br>" + " Lucky Number :" + document.getElementById("lnum").value;
+
+                var arr1=document.getElementsByName("ffood");
+                for(var ob of arr1){
+                    if(ob.checked){
+                        document.getElementById("mydiv").innerHTML += "<br>" + " Favourite Food :" + ob.value;
+                    }
+                }
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form style="border:2px solid blue; padding-left: 20px; width: 400px;">
+        <div>
+            <table>
+                <br>
+                <tr>
+                    <td>Name : </td>
+                    <td>
+                        <input type="text" name="nm" id="nm" required autofocus pattern="[a-zA-Z]">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Birth Date :
+                    </td>
+                    <td>
+                        <input type="date" name="bdate" id="bdate">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email Address :
+                    </td>
+                    <td>
+                        <input type="text" name="email" id="email" pattern="@company.com$" required>
+                    </td>
+                    <td id="td1">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender :
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="male" value="Male"> Male <br>
+                        <input type="radio" name="gender" id="female" value="Female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lucky Number :
+                    </td>
+                    <td>
+                        <input type="number" name="lnum" id="lnum" required minlength="4" maxlength="4">
+                    </td>
+                    <td id="td2">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Favourite Foods :
+                    </td>
+                    <td>
+                        <input type="checkbox" name="ffood" id="pizza" value="Pizza">Pizza <br>
+                        <input type="checkbox" name="ffood" id="pasta" value="Pasta">Pasta <br>
+                        <input type="checkbox" name="ffood" id="chinese" value="Chinese">chinese <br>
+                    </td>
+                </tr>
+            </table>
+            <div style="align-items: center;">
+                <button type="button" name="btn" id="btn" onclick="senddata()">Send Data</button><br>
+            </div>
+            <br>
+        </div>
+        <div id="mydiv">
+
+        </div>
+    </form>
+</body>
+
+</html>

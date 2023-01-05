@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function myFunction(){
+                num=parseInt(prompt("Enter Number"));
+                num1=1;
+                while(num1!=num+1){
+                    if(num1%2==0)
+                        document.getElementById("para").innerHTML+=num1+"  "
+                        num1+=1;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" id="btn" onclick="myFunction()">Click Here</button>
+        <p id="para"></p>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<html>
+
+<body>
+    <form>
+        <table bgcolor="pink" style="border-collapse:collapse;" border="2px" >
+            <tr>
+                <td style="border:2px solid black;">
+                    <label for="nm">Name</lab>
+                </td>
+                <td>
+                    <input type="text" name="name" id="nm" autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td style="border:2px solid black;">
+                    <label>Employee Code</label>
+                </td>
+                <td style="border:2px solid black;">
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="border:2px solid black;">
+                    <label>
+                        Department
+                    </label>
+                </td>
+                <td style="border:2px solid black;">
+                    <input type="radio" name="dept" id="admin">Admin<br>
+                    <input type="radio" name="dept" id="hr">HR <br>
+                    <input type="radio" name="dept" id="tech">Technical <br>
+                    <input type="radio" name="dept" id="accts">Accounts <br>
+                </td>
+            </tr>
+            <tr>
+                <td style="border:2px solid black;">
+                    <label for="dd">
+                        Date of Joining
+                    </label>
+                </td>
+                <td style="border:2px solid black;">
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <input type="number" name="day" id="dd" min="1" max="31">
+                            </td>
+                            <td>/</td>
+                            <td width="60px">
+                                <input type="number" name="month" id="mm" min="1" max="12">
+                            </td>
+                            <td>/</td>
+                            <td width="60px">
+                                <input type="number" name="year" id="yy" min="1960" max="2099">
+                            </td>
+                        </tr>
+                        <tr>
+                           <td align="center"> dd </td>
+                           <td> </td>
+                           <td align="center"> mm </td>
+                           <td> </td>
+                           <td align="center"> yyyy </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="border:2px solid black;">
+                    <label for="addr">
+                        Address
+                    </label>
+                </td>
+                <td style="border:2px solid black;">
+                    <textarea name="address" id="addr" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="border:2px solid black;">
+                    <label >
+                        Training programs Attended
+                    </label>
+                </td>
+                <td style="border:2px solid black;">
+                    <input type="checkbox" name="training" id="html">HTML/DHTML <br>
+                    <input type="checkbox" name="training" id="java">JAVA <br>
+                    <input type="checkbox" name="training" id="clsr">CLIENT/SERVER <br>
+                    <input type="checkbox" name="training" id="net">.NET <br>
+                </td>
+            </tr>
+            <tr>
+                <td style="border:2px solid black;">
+                    <label for="">
+                        Training Programmes need to attend
+                    </label>
+                </td>
+                <td style="border:2px solid black;">
+                    <select name="tpa" id="js">
+                        <option value="noselection">----select course----</option>
+                        <option value="javascript">JAVASCRIPT</option>
+                        <option value="jstruts">JSTRUTS</option>
+                        <option value="msnet">.NET</option> 
+                        <option value="ds">DATA STRUCTURE</option> 
+                        <option value="ndjs">NODEJS</option> 
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="border:2px solid black;">
+                    Send the information at
+                </td>
+                <td style="border:2px solid black;">
+                    <a href="mailto:empinfo@patni.com">empinfo@patni.com</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
